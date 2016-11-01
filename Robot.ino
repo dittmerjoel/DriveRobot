@@ -23,15 +23,13 @@ void setup() {                        //Läuft beim anschalten, bzw beim Reset e
   pinMode(BIA, OUTPUT);
   pinMode(BIB, OUTPUT);
   pinMode(10,OUTPUT);                 //LED an Pin 10 als OUTPUT
-  Serial.begin(9600);                 //Daten über USB an Monitoring senden mit 9600 Boardrate
- 
+  
 
  }
  
 void loop(){                          //Läuft für immer
 
-  Serial.println(entfernung);         //Schreibe die Variable entfernung im Monitoring
-  
+    
   digitalWrite(trigger, LOW);         //Messvorgang und Umrechnung in cm
   delay(5);
   digitalWrite(trigger, HIGH);
